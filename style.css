@@ -1,34 +1,33 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body {
-  margin-top: 100px;
-}
-
 
 #hero {
-  height: 60vh;
-  /* add Space_Transportation as background image */
+    /* Why should we use position relative in this case? */
+    /* Position static looks the same! */
+    /* position: relative; */
+    height: 60vh;
+    background: center url("Space_Transportation.jpg");
+    background-size: cover;
 }
 
 #hero-img {
-  /* add position */
-  /* and if you want transition effects */
+    position: absolute;
+    right: 0;
+    top: 25%;
+    width: 20%;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 #hero:hover #hero-img {
-  /* animate size position and rotation */
+    transform: scale(0.30) translate(-150%, -150%) rotate(5turn);
+    opacity: 0;
 }
-
-/* comment above and uncomment bellow: why this doesn't work well?? */
-/* #hero-img:hover{
-    transform: scale(.3) translate(-50px, -250px) rotate(3turn);
-} */
 
 main {
     width: 90vw;
     margin: auto;
     background-color: thistle;
-  }
+}
